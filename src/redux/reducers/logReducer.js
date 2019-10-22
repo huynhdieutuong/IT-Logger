@@ -1,4 +1,10 @@
-import { GET_LOGS, SET_LOADING, LOGS_ERROR } from '../types';
+import {
+  GET_LOGS,
+  SET_LOADING,
+  LOGS_ERROR,
+  ADD_LOG,
+  DELETE_LOG
+} from '../types';
 
 const initialState = {
   logs: [],
@@ -14,6 +20,16 @@ export default (state = initialState, action) => {
         ...state,
         logs: action.payload,
         loading: false
+      };
+    case ADD_LOG:
+      return {
+        ...state,
+        logs: [...state.logs, action.payload]
+      };
+    case DELETE_LOG:
+      return {
+        ...state,
+        logs: state.logs.filter(log => log.id !== action.payload)
       };
     case LOGS_ERROR:
       return {
