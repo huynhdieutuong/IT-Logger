@@ -14,8 +14,9 @@ const AddLogModal = ({ addLog }) => {
     if (message === '' || tech === '') {
       M.toast({ html: 'Please enter a message and tech' });
     } else {
-      const newLog = { message, attention, tech };
+      const newLog = { message, attention, tech, date: Date.now() };
       addLog(newLog);
+      M.toast({ html: `Log added by ${tech}` });
     }
 
     // Clear Fields
