@@ -16,10 +16,10 @@
     },
     {
       "id": 3,
-      "message": "Changed memory on workstation 050",
-      "attention": false,
-      "date": "03-02-2019",
-      "tech": "Sara Wilson"
+      "message": "Changed memory on workstation 0500",
+      "tech": "Sara Wilson",
+      "attention": true,
+      "date": 1571823286379
     }
   ],
   "techs": [
