@@ -29,14 +29,14 @@
       "lastName": "Doe"
     },
     {
-      "id": 2,
-      "firstName": "Sam",
-      "lastName": "Smith"
-    },
-    {
       "id": 3,
       "firstName": "Sara",
       "lastName": "Wilson"
+    },
+    {
+      "firstName": "Sam",
+      "lastName": "Smith",
+      "id": 2
     }
   ]
 }

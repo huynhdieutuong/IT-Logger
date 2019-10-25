@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import { updateLog, clearCurrent } from '../../redux/actions/logActions';
 
+import TechSelectOptions from '../techs/TechSelectOptions';
 import M from 'materialize-css/dist/js/materialize.min.js';
 
 const EditLogModal = ({ current, updateLog, clearCurrent }) => {
@@ -59,9 +60,6 @@ const EditLogModal = ({ current, updateLog, clearCurrent }) => {
               value={message}
               onChange={e => setMessage(e.target.value)}
             />
-            <label htmlFor='message' className='active'>
-              Log Message
-            </label>
           </div>
         </div>
         <div className='row'>
@@ -69,16 +67,14 @@ const EditLogModal = ({ current, updateLog, clearCurrent }) => {
             <select
               name='tech'
               value={tech}
+              className='browser-default'
               onChange={e => setTech(e.target.value)}
             >
               <option value='' disabled>
                 Select Technician
               </option>
-              <option value='John Doe'>John Doe</option>
-              <option value='Sam Smith'>Sam Smith</option>
-              <option value='Sara Wilson'>Sara Wilson</option>
+              <TechSelectOptions />
             </select>
-            <label>Select Technician</label>
           </div>
         </div>
         <div className='row'>
