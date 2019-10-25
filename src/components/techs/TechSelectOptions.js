@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { getTechs } from '../../redux/actions/teachActions';
+import { getTechs } from '../../redux/actions/techActions';
 
-const TechSelectOption = ({ tech: { techs }, getTechs }) => {
+const TechSelectOption = ({ techs, getTechs }) => {
   useEffect(() => {
     getTechs();
     // eslint-disable-next-line
@@ -26,7 +26,7 @@ TechSelectOption.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  tech: state.tech
+  techs: state.tech.techs
 });
 
 export default connect(

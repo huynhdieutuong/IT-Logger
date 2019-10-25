@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { addTech } from '../../redux/actions/teachActions';
+import { addTech } from '../../redux/actions/techActions';
 import M from 'materialize-css/dist/js/materialize.min.js';
 
 const AddTechModal = ({ addTech }) => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { deleteTech } from '../../redux/actions/teachActions';
+import { deleteTech } from '../../redux/actions/techActions';
 import M from 'materialize-css/dist/js/materialize.min.js';
 
 const TechItem = ({ tech, deleteTech }) => {
