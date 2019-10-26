@@ -30,7 +30,7 @@ const Logs = props => {
         <h4 className='center'>System Logs</h4>
       </li>
       {logs.length > 0 ? (
-        logs.map(log => <LogItem log={log} key={log.id} />)
+        logs.map(log => <LogItem log={log} key={log._id} />)
       ) : (
         <p className='center'>No logs to show...</p>
       )}

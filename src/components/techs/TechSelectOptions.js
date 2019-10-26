@@ -13,7 +13,7 @@ const TechSelectOption = ({ techs, getTechs }) => {
   return (
     techs.length > 0 &&
     techs.map(tech => (
-      <option key={tech.id} value={`${tech.firstName} ${tech.lastName}`}>
+      <option key={tech._id} value={`${tech.firstName} ${tech.lastName}`}>
         {tech.firstName} {tech.lastName}
       </option>
     ))
@@ -21,7 +21,7 @@ const TechSelectOption = ({ techs, getTechs }) => {
 };
 
 TechSelectOption.propTypes = {
-  techs: PropTypes.object.isRequired,
+  techs: PropTypes.array.isRequired,
   getTechs: PropTypes.func.isRequired
 };
 
