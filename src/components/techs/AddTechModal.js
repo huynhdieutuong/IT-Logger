@@ -9,12 +9,12 @@ const AddTechModal = ({ addTech }) => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
 
-  const onSubmit = () => {
+  const onSubmit = async () => {
     if (firstName === '' || lastName === '') {
       M.toast({ html: 'Please enter the first and last name' });
     } else {
       const newTech = { firstName, lastName };
-      addTech(newTech);
+      await addTech(newTech);
       M.toast({ html: `${firstName} ${lastName} added!` });
     }
 

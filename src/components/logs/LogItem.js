@@ -7,8 +7,8 @@ import { deleteLog, setCurrent } from '../../redux/actions/logActions';
 import M from 'materialize-css/dist/js/materialize.min.js';
 
 const LogItem = ({ log, deleteLog, setCurrent }) => {
-  const onDelete = () => {
-    deleteLog(log._id);
+  const onDelete = async () => {
+    await deleteLog(log._id);
     M.toast({ html: 'Log deleted!' });
   };
   return (

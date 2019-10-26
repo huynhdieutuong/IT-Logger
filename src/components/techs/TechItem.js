@@ -6,8 +6,8 @@ import { deleteTech } from '../../redux/actions/techActions';
 import M from 'materialize-css/dist/js/materialize.min.js';
 
 const TechItem = ({ tech, deleteTech }) => {
-  const onDelete = () => {
-    deleteTech(tech._id);
+  const onDelete = async () => {
+    await deleteTech(tech._id);
     M.toast({ html: `${tech.firstName} ${tech.lastName} deleted!` });
   };
   return (
